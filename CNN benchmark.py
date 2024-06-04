@@ -7,12 +7,12 @@ from sklearn.metrics import accuracy_score
 
 # Load and preprocess the MNIST dataset
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
-x_train = x_train.reshape(-1, 28, 28, 1) / 255.0  # Normalize and reshape input
-x_test = x_test.reshape(-1, 28, 28, 1) / 255.0
-y_train_cat = to_categorical(y_train)  # Convert labels to one-hot encoding
+x_train = x_train.reshape(-1, 28, 28, 1) / 255.0  # To normalize and reshape input image
+x_test = x_test.reshape(-1, 28, 28, 1) / 255.0 # Have to do it for both
+y_train_cat = to_categorical(y_train) 
 y_test_cat = to_categorical(y_test)
 
-# Define and compile the CNN model
+# Define the CNN model
 cnn_model = Sequential([
     Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
     MaxPooling2D((2, 2)),
