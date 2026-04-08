@@ -1,10 +1,9 @@
 # Neuromorphic_Computing
 
 ## TLDR
-The spiking neural network (SNN) and convolutional neural network (CNN) both run using python by using an MNIST dataset of hand-drawn images. Among the packages used were torch, torchvision , and spikingjelly for the SNN and NumPy and keras for the CNN.
+The spiking neural network (SNN) and convolutional neural network (CNN) both run using python by using an MNIST dataset of hand-drawn images. Among the packages used were torch, torchvision, and spikingjelly for the SNN and NumPy and keras for the CNN.
 
 The intention of this code was to test and compare the efficency of SNNs and CNNs for empirical research purposes.
-The current README.md file contains basic information about the repository, but it is missing some key elements that would make it more informative and user-friendly. Here are some suggestions to improve it:
 
 ## Overview
 
