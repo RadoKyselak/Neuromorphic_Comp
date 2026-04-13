@@ -1,47 +1,37 @@
 # Neuromorphic_Computing
-
 ## Overview
-The spiking neural network (SNN) and convolutional neural network (CNN) both run using python by using an MNIST dataset of hand-drawn images. Among the packages used were torch, torchvision, and spikingjelly for the SNN and NumPy and keras for the CNN.
-
-The goal of this project is to test and compare the efficiency of SNNs and CNNs for empirical research purposes.
-
+Neuromorphic computing is a hardware and software paradigm inspired by the structure of the human brain. This project benchmarks two neural network approaches on the MNIST handwritten-digit dataset:
+- **SNN (Spiking Neural Network)** — a biologically inspired model that communicates via discrete spikes, implemented with `torch`, `torchvision`, and `spikingjelly`.
+- **CNN (Convolutional Neural Network)** — a standard deep-learning model, implemented with `keras` (TensorFlow backend), `numpy`, and `scikit-learn`.
+The goal is to compare the accuracy and run-time efficiency of SNNs vs CNNs for empirical research purposes.
+## Requirements
+- Python 3.8 or higher
 ## Installation
-
-To get started with the project, follow these steps:
-
 1. Clone the repository:
    ```sh
    git clone https://github.com/RadoKyselak/Neuromorphic_Comp.git
    cd Neuromorphic_Comp
    ```
-
 2. Create a virtual environment and activate it:
    ```sh
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   venv\Scripts\activate  # On Mac use `source venv/bin/activate`
    ```
-
 3. Install the required packages:
    ```sh
    pip install -r requirements.txt
    ```
-
 ## Usage
-
-To run the SNN code:
+To run the SNN benchmark:
 ```sh
-python run_snn.py
+python "SNN benchmark.py"
 ```
-
-To run the CNN code:
+To run the CNN benchmark:
 ```sh
-python run_cnn.py
+python "CNN benchmark.py"
 ```
-
+Both scripts automatically download the MNIST dataset on first run. The SNN script prints the start/end time and training loss, then reports test accuracy. The CNN script trains for 4 epochs and reports final accuracy.
 ## License
-
 This project is licensed under the Apache License. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
-
-If you have any questions or feedback, please feel free to reach out by opening an issue or contacting the maintainers.
+If you have any questions or feedback, please open an [issue](https://github.com/RadoKyselak/Neuromorphic_Comp/issues).
